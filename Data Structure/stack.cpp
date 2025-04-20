@@ -24,6 +24,7 @@ public:
         if (top >= 0)
         {                   // check if stack is not empty
             arr.pop_back(); // remove last element from vector
+            cout << arr[top] << " is Popped" << endl;
             top--;          // decrement top index
         }
         else
@@ -41,7 +42,7 @@ public:
         else
         {
             cout << "Stack is empty" << endl; // print message if stack is empty
-            return -1;                        // return -1 if stack is empty
+            return 0;                       // return -1 if stack is empty
         }
     }
 
@@ -65,7 +66,8 @@ int main()
         case 1:                              // push operation
             cout << "Enter value to push: "; // prompt user for value
             cin >> value;                    // read value
-            s.push(value);                   // push value onto stack
+            s.push(value); 
+            cout << value << " is pushed to stack." << endl;                 // push value onto stack
             break;
         case 2:      // pop operation
             s.pop(); // pop top element from stack
