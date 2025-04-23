@@ -4,14 +4,13 @@ void Merge(vector<int> &arr, int left ,int mid , int right ){
     int i = left,j= mid+1;
     
     vector<int> temp;
-    while(i<=mid && j<=right){
+    while(i <= mid && j <= right){
         if(arr[i]<arr[j]){
-            temp.push_back(arr[i]);
-            i++;
+            temp.push_back(arr[i++]);
         }
         else{
-            temp.push_back(arr[j]);
-            j++;
+            temp.push_back(arr[j++]);
+            
         }
     }
     while (i <= mid)
@@ -23,20 +22,20 @@ void Merge(vector<int> &arr, int left ,int mid , int right ){
     }
 }
 void Merge_Sort(vector<int>&arr , int left , int right){
-    if(left<right){
-        int mid = left + (right -left ) / 2;
-        Merge_Sort(arr , left , mid);
-        Merge_Sort(arr , mid+1 , right);
-        Merge(arr , left , mid , right);
+    if(left < right){
+        int mid = left + ( right - left ) / 2;
+        Merge_Sort(arr , left , mid); // left halves
+        Merge_Sort(arr , mid + 1 , right); // right halves
+        Merge(arr , left , mid , right); // merge 
     }
 
 }
 int main(){
     vector<int> arr = {2, 222, 220, 8, 2222, 1, 87, 3, 44, 22, 9, 99, 7, 92, 11, 4};
-    Merge_Sort(arr,0,arr.size()-1);
+    Merge_Sort(arr , 0 , arr.size()-1 );
     int n = arr.size();
     cout << "Sorted array: ";
-    for (int i = 0; i < n; i++)
+    for (int i = 0 ; i < n ; i++)
     {
         cout << arr[i] << " ";
     }
