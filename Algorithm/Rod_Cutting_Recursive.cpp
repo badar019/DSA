@@ -13,6 +13,6 @@ int main() {
     vector<int> price = {1, 5, 8, 9, 10, 17, 17, 20};
     int n = price.size();
 
-    cout << "Max Value (Memoization): " << rodcuttingRecursive(price, n) << endl;
+    cout << "Max Value (Recursive): " << rodcuttingRecursive(price, n) << endl;
     return 0;
 }
