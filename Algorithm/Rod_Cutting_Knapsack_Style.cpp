@@ -1,6 +1,6 @@
 // 2D DP (Unbounded Knapsack Style)
-#include<bits/stdc++.h>
-using namespace std;
+#include<bits/stdc++.h> // header file for all  standard library
+using namespace std; // using standard namespace
 int rodcutting2D( vector<int> &price , int n){
     vector<vector<int>> dp( n+1 , vector(n+1 , 0));
     for(int i = 1 ; i <= n ; i++){ 

@@ -2,8 +2,6 @@
 #include <stack>     // include stack library for stack operations
 #include <vector>    // include vector library for dynamic arrays
 #include <algorithm> // include algorithm library for sorting
-#include <string>    // include string library for string operations
-#include <utility>   // include utility library for pair operations
 using namespace std; // use standard namespace
 class Stack
 {
