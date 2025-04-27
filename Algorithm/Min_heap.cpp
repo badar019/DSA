@@ -111,14 +111,14 @@ public:
 // Main function to interact with the heap
 int main() {
     MinHeap mh;  // Create a MinHeap object
-    int a;
+   /* int a;
     cout << "Enter 5 elements to insert into the heap: ";
     for (int i = 0; i < 5; i++) {
         cin >> a;
         mh.Insert(a);  // Insert elements into the heap
     }
     mh.display();  // Display the current state of the heap
-
+    */
     int choice, data;
     do {
         // Display menu options
