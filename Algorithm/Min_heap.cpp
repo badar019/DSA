@@ -84,6 +84,11 @@ public:
 
     // Function to perform heap sort
     void heapSort() {
+        // check whether array is empty
+        if (Size == 0) {
+            cout << "The heap is empty." << endl;
+            return;
+        }
         // First, build the heap
         for (int i = Size / 2 - 1; i >= 0; i--) {
             HeapDown(i);  // Build the heap by heapifying each node starting from the last non-leaf
